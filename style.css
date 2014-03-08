@@ -1,0 +1,19 @@
+/*
+Theme Name: Global News
+Theme URI: http://www.instantshift.com/
+Description: News Theme by <a href="http://www.instantshift.com">InstantShift</a>. Developed by <a href="http://www.rapidxhtml.com">RapidxHTML</a>.
+Version: 1.1
+Author: InstantShift
+Author URI: http://www.instantshift.com
+TAGS: news, newspaper, two-columns, three-columns, fixed-width, theme-options, right-sidebar, threaded-comments
+*/
+
+/* Reset */
+@import "css/reset.css";
+
+/* Default styles */
+@import "css/layout.css";
+
+/* Custom styles */
+@import "css/custom.css";
+
