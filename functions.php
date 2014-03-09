@@ -242,7 +242,7 @@ function mytheme_admin() {
 </style>
 <div class="wrap">
 <div id="icon-options-general" class="icon32"><br /></div>
-<h2><?php echo $themename; ?> Settings</h2>
+<h2><?php echo $themename?> Settings</h2>
 <div class="clear"></div>
 <form method="post">
 <p style="font-size:11px;font-family:Verdana, Geneva, sans-serif;color:#C00;text-decoration:underline;margin:20px 0 0 0;">Always remember to save your changes</p>
@@ -273,14 +273,14 @@ function mytheme_admin() {
     
     <?php break;
     case "title": ?>
-    <a class="block"><?php echo $value['name']; ?></a>
+    <a class="block"><?php echo $value['name']?></a>
     
     <?php break;
     case 'text': ?>
 
     <tr>
-      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']; ?></td>
-      <td width="80%"><input style="width:700px;<?php echo $value['style']; ?>" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" /><span class="desc_notes"><?php echo $value['desc']; ?></span></td>
+      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']?></td>
+      <td width="80%"><input style="width:700px;<?php echo $value['style']?>" name="<?php echo $value['id']?>" id="<?php echo $value['id']?>" type="<?php echo $value['type']?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" /><span class="desc_notes"><?php echo $value['desc']?></span></td>
     </tr>
     <tr>
       <td colspan="2" style="padding:5px;"><hr style="height:1px;background:#CCC;border:0;" /></td>
@@ -290,16 +290,16 @@ function mytheme_admin() {
     case 'text_last': ?>
 
     <tr>
-      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']; ?></td>
-      <td width="80%"><input style="width:700px;<?php echo $value['style']; ?>" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" /></td>
+      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']?></td>
+      <td width="80%"><input style="width:700px;<?php echo $value['style']?>" name="<?php echo $value['id']?>" id="<?php echo $value['id']?>" type="<?php echo $value['type']?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option( $value['id'] ); } else { echo $value['std']; } ?>" /></td>
     </tr>
 
     <?php break;
     case 'select': ?>
 
     <tr>
-      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']; ?></td>
-      <td width="80%"><select style="width:150px;<?php echo $value['style']; ?>" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_option( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select><span class="desc_notes"><?php echo $value['desc']; ?></span></td>
+      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']?></td>
+      <td width="80%"><select style="width:150px;<?php echo $value['style']?>" name="<?php echo $value['id']?>" id="<?php echo $value['id']?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_option( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option?></option><?php } ?></select><span class="desc_notes"><?php echo $value['desc']?></span></td>
     </tr>
     <tr>
       <td colspan="2" style="padding:5px;"><hr style="height:1px;background:#CCC;border:0;" /></td>
@@ -309,17 +309,17 @@ function mytheme_admin() {
     case 'select_last': ?>
 
     <tr>
-      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']; ?></td>
-      <td width="80%"><select style="width:150px;<?php echo $value['style']; ?>" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_option( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option; ?></option><?php } ?></select><span class="desc_notes"><?php echo $value['desc']; ?></span></td>
+      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']?></td>
+      <td width="80%"><select style="width:150px;<?php echo $value['style']?>" name="<?php echo $value['id']?>" id="<?php echo $value['id']?>"><?php foreach ($value['options'] as $option) { ?><option<?php if ( get_option( $value['id'] ) == $option) { echo ' selected="selected"'; } elseif ($option == $value['std']) { echo ' selected="selected"'; } ?>><?php echo $option?></option><?php } ?></select><span class="desc_notes"><?php echo $value['desc']?></span></td>
     </tr>
 
     <?php break;
     case 'textarea': ?>
         
     <tr>
-      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']; ?></td>
+      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']?></td>
       <td width="80%">
-      <textarea name="<?php echo $value['id']; ?>" style="width:95%;height:100px;<?php echo $value['style']; ?>" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_option( $value['id'] ) != "") { echo stripslashes(get_option( $value['id'] )); } else { echo $value['std']; } ?></textarea></td>
+      <textarea name="<?php echo $value['id']?>" style="width:95%;height:100px;<?php echo $value['style']?>" type="<?php echo $value['type']?>" cols="" rows=""><?php if ( get_option( $value['id'] ) != "") { echo stripslashes(get_option( $value['id'] )); } else { echo $value['std']; } ?></textarea></td>
     </tr>
     <tr>
       <td colspan="2" style="padding:5px;"><hr style="height:1px;background:#CCC;border:0;" /></td>
@@ -329,17 +329,17 @@ function mytheme_admin() {
     case 'textarea_last': ?>
         
     <tr>
-      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']; ?></td>
+      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']?></td>
       <td width="80%">
-      <textarea name="<?php echo $value['id']; ?>" style="width:95%;height:100px;<?php echo $value['style']; ?>" type="<?php echo $value['type']; ?>" cols="" rows=""><?php if ( get_option( $value['id'] ) != "") { echo stripslashes(get_option( $value['id'] )); } else { echo $value['std']; } ?></textarea></td>
+      <textarea name="<?php echo $value['id']?>" style="width:95%;height:100px;<?php echo $value['style']?>" type="<?php echo $value['type']?>" cols="" rows=""><?php if ( get_option( $value['id'] ) != "") { echo stripslashes(get_option( $value['id'] )); } else { echo $value['std']; } ?></textarea></td>
     </tr>
 
     <?php break;            
     case "checkbox": ?>
     <tr>
-      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']; ?></td>
+      <td width="20%" valign="top" align="right" style="padding:5px 20px 0 0;font-size:12px;font-weight:bold;"><?php echo $value['name']?></td>
       <td width="80%"><? if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = ""; } ?>
-      <input type="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /></td>
+      <input type="checkbox" name="<?php echo $value['id']?>" id="<?php echo $value['id']?>" value="true" <?php echo $checked?> /></td>
     </tr>
             
     <?php break;
@@ -349,13 +349,13 @@ function mytheme_admin() {
 </div>
   <div class="clear"></div>
   <p class="submit" style="float:left;margin:0;">
-    <input name="save" type="submit" class="button-primary" value="<?php _e( 'Save Options', 'lttrapidx' ); ?>" />    
+    <input name="save" type="submit" class="button-primary" value="<?php _e( 'Save Options', 'lttrapidx' )?>" />
     <input type="hidden" name="action" value="save" />
   </p>
 </form>
 <form method="post">
   <p class="submit" style="float:left;margin:0 0 0 10px;">
-    <input name="reset" type="submit" class="button-primary" value="<?php _e( 'Reset Options', 'lttrapidx' ); ?>" />
+    <input name="reset" type="submit" class="button-primary" value="<?php _e( 'Reset Options', 'lttrapidx' )?>" />
     <input type="hidden" name="action" value="reset" />
   </p>
 </form>

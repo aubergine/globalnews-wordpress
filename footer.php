@@ -19,12 +19,12 @@ get_header();
   <div class="rapidxwpr">
   
     <!-- footer menu -->
-    <?php wp_nav_menu( array( 'container_id' => 'footermenu', 'depth' => 1, 'menu_class' => 'footermenu', 'theme_location' => 'topmenu' ) ); ?>
+    <?php wp_nav_menu( array( 'container_id' => 'footermenu', 'depth' => 1, 'menu_class' => 'footermenu', 'theme_location' => 'topmenu' ) )?>
     <!-- /Footer Menu -->
     
     <!-- copyright -->
     <div class="copyright">
-      2010 &copy; <a href="<?php echo get_option('home'); ?>/"><u><?php bloginfo('name'); ?></u></a>. Sponsored by <a href="http://www.instantshift.com/" target="_blank">Instantshift</a>. Developed by <a href="http://www.rapidxhtml.com/" target="_blank" title="PSD to HTML">RapidxHTML</a>.
+      2010 &copy; <a href="<?php echo get_option('home')?>/"><u><?php bloginfo('name')?></u></a>. Sponsored by <a href="http://www.instantshift.com/" target="_blank">Instantshift</a>. Developed by <a href="http://www.rapidxhtml.com/" target="_blank" title="PSD to HTML">RapidxHTML</a>.
     </div>
     <!-- / copyright -->
   
@@ -34,7 +34,7 @@ get_header();
 
 </div>
 
-<?php wp_footer(); ?>
+<?php wp_footer()?>
 <script type="text/javascript">
   <!--
   $(function() {

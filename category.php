@@ -17,7 +17,7 @@ get_header();
     <!-- right column -->
     <div id="right" class="clearingfix">
     
-      <?php get_sidebar(); ?>
+      <?php get_sidebar()?>
     
     </div>
     <!-- / right column -->
@@ -25,12 +25,12 @@ get_header();
     <!-- content column -->
     <div id="main" class="clearingfix">
 
-      <h3 class="pagetitle">&#8216;<?php single_cat_title(); ?>&#8217; News</h3>
+      <h3 class="pagetitle"><?php printf("&#8216;%s&#8217; News", single_cat_title()) ?></h3>
 
-      <?php
-        $category_description = category_description();
-        if ( ! empty( $category_description ) ) echo '<div class="archive-meta">' . $category_description . '</div>';
-      ?>
+      <?php $category_description = category_description() ?>
+      <?php if ( ! empty( $category_description ) ): ?>
+      <div class="archive-meta"><?php echo $category_description ?> </div>
+      <?php endif ?>
 
       <div class="listposts">
         <?php
@@ -52,7 +52,7 @@ get_header();
     
       <!-- advert -->
       <div class="advert">
-        <?php echo stripslashes(get_option('gbn_ad_300x250_footer_singlepage')); ?>
+        <?php echo stripslashes(get_option('gbn_ad_300x250_footer_singlepage'))?>
       </div>
       <!-- advert -->
     
@@ -67,49 +67,49 @@ get_header();
       
         <div class="boxes first">
           <ul>
-            <?php query_posts('showposts=1&tag=headlines'); ?>
-            <?php while (have_posts()) : the_post(); ?>
+            <?php query_posts('showposts=1&tag=headlines')?>
+            <?php while (have_posts()) : the_post()?>
             <li>
-              <h5 class="category"><?php the_category(' '); ?></h5>
-              <h3><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="title"><?php the_title(); ?></a></h3>
-              <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
-              <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16); ?></p>
-              <div class="meta"><?php the_time('F jS, Y') ?> | <a href="<?php the_permalink() ?>">Read more</a></div>
+              <h5 class="category"><?php the_category(' ')?></h5>
+              <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
+              <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
+              <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16)?></p>
+              <div class="meta"><?php the_time(_('F jS, Y')) ?> | <a href="<?php the_permalink() ?>"><?php printf("Read more") ?></a></div>
             </li>
-            <?php endwhile; ?>
-            <?php wp_reset_query(); ?>
+            <?php endwhile?>
+            <?php wp_reset_query()?>
           </ul>
         </div>
         
         <div class="boxes">
           <ul>
-            <?php query_posts('showposts=1&tag=headlines&offset=1'); ?>
-            <?php while (have_posts()) : the_post(); ?>
+            <?php query_posts('showposts=1&tag=headlines&offset=1')?>
+            <?php while (have_posts()) : the_post()?>
             <li>
-              <h5 class="category"><?php the_category(' '); ?></h5>
-              <h3><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="title"><?php the_title(); ?></a></h3>
-              <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
-              <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16); ?></p>
-              <div class="meta"><?php the_time('F jS, Y') ?> | <a href="<?php the_permalink() ?>">Read more</a></div>
+              <h5 class="category"><?php the_category(' ')?></h5>
+              <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
+              <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
+              <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16)?></p>
+              <div class="meta"><?php the_time(__('F jS, Y')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more") ?></a></div>
             </li>
-            <?php endwhile; ?>
-            <?php wp_reset_query(); ?>
+            <?php endwhile?>
+            <?php wp_reset_query()?>
           </ul>
         </div>
         
         <div class="boxes">
           <ul>
-            <?php query_posts('showposts=1&tag=headlines&offset=2'); ?>
-            <?php while (have_posts()) : the_post(); ?>
+            <?php query_posts('showposts=1&tag=headlines&offset=2')?>
+            <?php while (have_posts()) : the_post()?>
             <li>
-              <h5 class="category"><?php the_category(' '); ?></h5>
-              <h3><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" class="title"><?php the_title(); ?></a></h3>
-              <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
-              <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16); ?></p>
-              <div class="meta"><?php the_time('F jS, Y') ?> | <a href="<?php the_permalink() ?>">Read more</a></div>
+              <h5 class="category"><?php the_category(' ')?></h5>
+              <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
+              <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
+              <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16)?></p>
+              <div class="meta"><?php the_time(__('F jS, Y')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more") ?></a></div>
             </li>
-            <?php endwhile; ?>
-            <?php wp_reset_query(); ?>
+            <?php endwhile?>
+            <?php wp_reset_query()?>
           </ul>
         </div>
       
@@ -122,4 +122,4 @@ get_header();
   </div>
   <!-- / main body -->
 
-<?php get_footer(); ?>
+<?php get_footer()?>
