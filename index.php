@@ -43,7 +43,7 @@ get_header();
       <div class="featured_post_image"><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('mainimage') ?></a></div>
       <?php } ?>
       <h1><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_title()?></a></h1>
-      <?php the_content(__e('Read more...'))?>
+      <?php the_content(__('Read more...'))?>
       <?php endwhile?>
       <?php wp_reset_query()?>
     </div>

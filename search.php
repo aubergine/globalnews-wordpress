@@ -26,7 +26,7 @@ get_header();
     <div id="main" class="clearingfix">
 
 <?php if ( have_posts() ) : ?>
-      <h3 class="pagetitle"><?php printf(__('Search Results for "%"', get_search_query())) ?></h3>
+      <h3 class="pagetitle"><?php printf(__('Search Results for "%"'), get_search_query()) ?></h3>
         <?php
          get_template_part( 'loop', 'search' );
         ?>

@@ -3,8 +3,8 @@
       <div class="post" id="post-<?php the_ID()?>">
         <h1><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_title()?></a></h1>
         <p class="postmetadata">
-            <span><?php printf(__("Posted by %s", the_author_posts_link())) ?></span>
-            <?php printf(__("Posted on %s", the_time('l, F jS, Y'))) ?>
+            <span><?php printf(__("Posted by %s"), the_author_posts_link()) ?></span>
+            <?php printf(__("Posted on %s"), the_time('l, F jS, Y')) ?>
         </p>
         <div class="post_image">
           <?php if(has_post_thumbnail()) { ?><a href="<?php echo get_post_meta($post->ID, "thumb", $single = true)?>" title="<?php the_title()?>" class="zoom"><?php the_post_thumbnail('medium') ?></a><br /><?php } ?><br />

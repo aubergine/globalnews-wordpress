@@ -12,7 +12,7 @@
   <?php static $itemcount = 1; while ( have_posts() ) : the_post(); $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' )?>
       <div class="archivepage<?php echo $itemcount?> clearingfix">
         <h3 id="post-<?php the_ID()?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__("Permanent Link to %s"), the_title_attribute()) ?>"><?php the_title()?></a></h3>
-        <div class="postmetadata alt"><span><?php printf(__("By %s", the_author_posts_link())) ?></span><?php the_time(__('l, F jS, Y')) ?></div>
+        <div class="postmetadata alt"><span><?php printf(__("By %s"), the_author_posts_link()) ?></span><?php the_time(__('l, F jS, Y')) ?></div>
   
         <?php if(has_post_thumbnail()): ?>
         <a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('cat-thumb') ?></a>
@@ -42,7 +42,7 @@ echo paginate_links( array(
           </div>
           <div class="post_meta">
             <span class="post_cats">
-              <?php printf(__("Posted in %", the_category(', '))) ?>
+              <?php printf(__("Posted in %"), the_category(', ')) ?>
               <span class="post_comments_iphone"> | &nbsp;<?php comments_popup_link()?></span>
             </span>
             <span class="post_date">
