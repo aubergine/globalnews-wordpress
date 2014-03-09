@@ -43,13 +43,4 @@ get_header();
   </div>
   <!-- advert -->
 
-  <?php if(function_exists('c2c_get_recently_commented')) { ?>
-  <div class="sidebox" id="recent_commented">
-    <h3><?php _e("Recently Commented Articles") ?></h3>
-    <ul class="single_extras">
-      <?php c2c_get_recently_commented(5, "<li>%comments_URL%</li>")?>
-    </ul>
-  </div>
-  <?php } ?>
-
 <?php  if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : endif?>
