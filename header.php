@@ -20,7 +20,7 @@
   if ( $site_description && ( is_home() || is_front_page() ) )
     echo " | $site_description";
   if ( $paged >= 2 || $page >= 2 )
-    echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
+    echo ' | ' . sprintf( __( 'Page %s', 'globalnews' ), max( $paged, $page ) );
   ?></title>
   <link rel="profile" href="http://gmpg.org/xfn/11" />
   <meta name="author" content="RapidxHTML" />

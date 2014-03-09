@@ -25,10 +25,10 @@ get_header();
     <!-- content column -->
     <div id="main" class="clearingfix">
     
-      <h3 class="pagetitle"><?php _e( 'Not Found', 'twentyten' )?></h3>
+      <h3 class="pagetitle"><?php _e( 'Not Found', 'globalnews' )?></h3>
       <div id="post-0" class="post error404 not-found">
         <div class="entry-content">
-          <p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', 'twentyten' )?></p>
+          <p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', 'globalnews' )?></p>
           <?php get_search_form()?>
         </div>
       </div>

@@ -8,8 +8,11 @@
 # Websites:  http://www.instantshift.com
 -------------------------------------------------------------------------*/
 
-if ( ! isset( $content_width ) )
+if ( ! isset( $content_width ) ) {
   $content_width = 764;
+}
+
+load_theme_textdomain('globalnews', get_template_directory() . '/languages');
 
 // Theme Setup
 add_action( 'after_setup_theme', 'twentyten_setup' );

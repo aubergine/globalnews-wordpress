@@ -12,7 +12,7 @@ get_header();
 ?>
   <!-- sidebox -->
   <div class="sidebox" id="search">
-    <h3>Search</h3>
+    <h3><?php _e("Search", "globalnews") ?></h3>
     <form role="search" method="get" id="searchform" action="<?php echo get_option('home')?>" >
       <ul>
         <li><input type="text" value="" name="s" id="s" /><small>Type keyword for search.</small></li>

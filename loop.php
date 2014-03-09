@@ -1,8 +1,8 @@
 <?php if ( ! have_posts() ) : ?>
   <div id="post-0" class="post error404 not-found">
-    <h1 class="entry-title"><?php _e( 'Not Found', 'twentyten' )?></h1>
+    <h1 class="entry-title"><?php _e( 'Not Found', 'globalnews' )?></h1>
     <div class="entry-content">
-      <p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyten' )?></p>
+      <p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'globalnews' )?></p>
       <?php get_search_form()?>
     </div>
   </div>
@@ -38,7 +38,7 @@ echo paginate_links( array(
         <!-- post -->
         <div id="post-<?php the_ID()?>" <?php post_class('post-count'.$count)?>>
           <div class="post_header">
-            <h2 class="post_title"><a href="<?php the_permalink()?>" title="<?php printf( esc_attr__('Permalink to %s', 'twentyten'), the_title_attribute( 'echo=0' ) )?>" rel="bookmark"><?php the_title()?></a></h2>
+            <h2 class="post_title"><a href="<?php the_permalink()?>" title="<?php printf( esc_attr__('Permalink to %s', 'globalnews'), the_title_attribute( 'echo=0' ) )?>" rel="bookmark"><?php the_title()?></a></h2>
           </div>
           <div class="post_meta">
             <span class="post_cats">
