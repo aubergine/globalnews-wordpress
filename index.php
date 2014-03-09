@@ -99,19 +99,6 @@ get_header();
   
     <!-- right column -->
     <div id="right" class="clearingfix">
-    
-      <!-- sidebox -->
-      <div class="sidebox" id="subscribe">
-        <h3><?php _e("Breaking News Alerts by E-Mail"); ?></h3>
-        <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=iShift', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-          <ul>
-            <li><input type="text" name="email" class="email" /><small><?php _e("Sign up to be notified for important news.") ?></small></li>
-            <li><input type="hidden" value="iShift" name="uri"/><input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe" /></li>
-          </ul>
-        </form>
-      </div>
-      <!-- / sidebox -->
-      
       <!-- sidebox -->
       <div class="sidebox" id="search">
         <h3><?php _e("Search") ?></h3>

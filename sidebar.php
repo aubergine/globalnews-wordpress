@@ -21,19 +21,7 @@ get_header();
     </form>
   </div>
   <!-- / sidebox -->
-  
-  <!-- sidebox -->
-  <div class="sidebox" id="subscribe">
-    <h3>Breaking News Alerts by E-Mail</h3>
-    <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=iShift', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-      <ul>
-        <li><input type="text" name="email" class="email" /><small><?php _e("Sign up to be notified for important news.") ?></small></li>
-        <li><input type="hidden" value="iShift" name="uri"/><input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe" /></li>
-      </ul>
-    </form>
-  </div>
-  <!-- / sidebox -->
-  
+
   <!-- advert -->
   <div class="advert">
     <?php echo stripslashes(get_option('gbn_ad_300x250_pri_singlepage'))?>
