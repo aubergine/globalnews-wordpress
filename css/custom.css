@@ -12,3 +12,7 @@
 
 Add your custom styles here instead of style.css for easier customization.
 */
+/*Fix for Yarpp Related posts*/
+#related_news div.yarpp-related h3 {
+    display: none;
+}
