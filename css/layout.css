@@ -133,6 +133,7 @@ div#header {
     height:120px;
     overflow:hidden;
     padding:10px 0 0 0;
+    position: relative;
 }
 
 /* logo */
@@ -249,7 +250,7 @@ div#mainmenu ul li a {
     float:left;
 }
 
-div#mainmenu ul li.item1 a {
+div#mainmenu ul li:first-child a {
     background:none;
 }
 
@@ -299,7 +300,7 @@ div.today-date {
     width:200px;
     float:right;
     text-align:right;
-    padding:77px 0 0 0;
+    padding:15px 0 0 0;
 }
 
 div.today-date a:link, div.today-date a:visited {
@@ -711,11 +712,11 @@ div.sideboxlist ul li a {
 }
 
 /* subscribe */
-div#subscribe ul {
+/*div#subscribe ul {
     background:url(../images/sub-mail.png) 3px 0 no-repeat;
     padding-left:60px;
-}
-
+}*/
+/*
 div#search ul {
     background:url(../images/search.png) 3px 0 no-repeat;
     padding-left:60px;
@@ -730,6 +731,33 @@ div#search ul input#s {
     padding:3px;
     font-size:12px;
     border:#CCC 1px solid;
+}*/
+
+/*New Search in header*/
+div#search {
+    float: right;
+    /*height: 25px;*/
+    display: inline-block;
+    /*line-height: 25px;*/
+    /*font-size: 16px;*/
+    /*margin: 3px 0;*/
+    /*padding: 0 4px;*/
+    position: absolute;
+    top: 87px;
+    right: 0;
+}
+div#search input[type="text"] {
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 0 2px;
+}
+div#search input[type="submit"] {
+    height: 29px;
+    line-height: 25px;
+    font-size: 16px;
+    padding: 0 2px;
+    margin-left: -6px;
 }
 
 /* advert */

@@ -99,17 +99,6 @@ get_header();
   
     <!-- right column -->
     <div id="right" class="clearingfix">
-      <!-- sidebox -->
-      <div class="sidebox" id="search">
-        <h3><?php _e("Search") ?></h3>
-        <form role="search" method="get" id="searchform" action="<?php echo get_option('home')?>" >
-          <ul>
-            <li><input type="text" value="" name="s" id="s" /><small><?php _e("Type keyword for search.") ?></small></li>
-            <li><input type="submit" id="searchsubmit" value="<?php _e("Search") ?>" /></li>
-          </ul>
-        </form>
-      </div>
-      <!-- / sidebox -->
       
       <!-- advert -->
       <div class="advert">
