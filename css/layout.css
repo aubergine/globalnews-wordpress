@@ -498,6 +498,7 @@ div.highlights h5 a:hover {
 div.highlights p {
     padding:0;
     margin:0;
+    display: inline-block;
 }
 
 div.highlights p img {
