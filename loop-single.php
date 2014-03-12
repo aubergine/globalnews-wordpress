@@ -3,17 +3,17 @@
       <div class="post" id="post-<?php the_ID()?>">
         <h1><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_title()?></a></h1>
         <p class="postmetadata">
-            <span><?php printf(__("Posted by %s"), the_author_posts_link()) ?></span>
-            <?php printf(__("Posted on %s"), the_time('l, F jS, Y')) ?>
+            <span><?php _e("Posted by ", 'globalnews'); the_author_posts_link() ?></span>
+            <?php _e("Posted on ", 'globalnews'); the_time(__('l, F jS, Y', 'globalnews')) ?>
         </p>
         <div class="post_image">
           <?php if(has_post_thumbnail()) { ?><a href="<?php echo get_post_meta($post->ID, "thumb", $single = true)?>" title="<?php the_title()?>" class="zoom"><?php the_post_thumbnail('medium') ?></a><br /><?php } ?><br />
           <ul id="post-links" class="clearingfix">
             <li class="email"><?php if(function_exists('wp_email')) { ?><?php email_link()?><?php } ?></li>
-            <li class="comments"><a href="#respond"><?php _e("Add Comments") ?></a></li>
-            <li class="print"><a href="javascript:window.print()"><?php _e("Print") ?></a></li>
+            <li class="comments"><a href="#respond"><?php _e("Add Comments", 'globalnews') ?></a></li>
+            <li class="print"><a href="javascript:window.print()"><?php _e("Print", 'globalnews') ?></a></li>
             <script type="text/javascript">var addthis_pub="49f3b26b0ed18b53";</script>
-            <li class="favorite"><a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><?php _e("Add to Favorites") ?></a></li>
+            <li class="favorite"><a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><?php _e("Add to Favorites", 'globalnews') ?></a></li>
             <script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
             <SCRIPT LANGUAGE="JavaScript">
               <!-- Begin
@@ -30,7 +30,7 @@
           </ul>
         </div>
         <div class="post_entry"><?php the_content('')?></div>
-        <?php the_tags( '<div class="tags"><span>' . __("Tags:") . '</span> ', ', ', '</div>')?>
+        <?php the_tags( '<div class="tags"><span>' . __("Tags:", 'globalnews') . '</span> ', ', ', '</div>')?>
         <div id="comments"><?php comments_template()?></div>
       </div>
 

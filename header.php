@@ -70,8 +70,8 @@
     
     <!-- today date -->
     <div class="today-date">
-      <a href='<?php bloginfo('rss2_url')?>'><?php _e("RSS FEED") ?></a><br />
-      <?php echo date(__('l, F jS Y'))?>
+      <a href='<?php bloginfo('rss2_url')?>'><?php _e("RSS FEED", 'globalnews') ?></a><br />
+      <?php echo date(__('l, F jS Y', 'globalnews'))?>
     </div>
     <!-- / today date -->
 

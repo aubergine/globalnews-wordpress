@@ -43,7 +43,7 @@ get_header();
       <div class="featured_post_image"><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('mainimage') ?></a></div>
       <?php } ?>
       <h1><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_title()?></a></h1>
-      <?php the_content(__('Read more...'))?>
+      <?php the_content(__('Read more...', 'globalnews'))?>
       <?php endwhile?>
       <?php wp_reset_query()?>
     </div>
@@ -59,7 +59,8 @@ get_header();
           <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
           <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
           <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,25)?></p>
-          <div class="meta"><?php the_time(__('F jS, Y')) ?> | <?php comments_popup_link() ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more") ?></a></div>
+
+          <div class="meta"><?php the_time(__('F jS, Y', 'globalnews')) ?> | <?php comments_popup_link() ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more", 'globalnews') ?></a></div>
         </li>
         <?php endwhile?>
         <?php wp_reset_query()?>
@@ -79,7 +80,7 @@ get_header();
   <!-- news jcarousel -->
   <div id="news-jcarousel" class="clearingfix">
     <div class="news-jcarousel-meta clearingfix">
-      <h3 id="news-jcarousel1">Today's Highlights</h3>
+      <h3 id="news-jcarousel1"><?php _e("Today's Highlights", 'globalnews') ?></h3>
       <a id="prevbut" title="prev"></a>
       <a id="nextbut" title="next"></a>
     </div>
@@ -124,7 +125,7 @@ get_header();
               <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
               <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
               <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16)?></p>
-              <div class="meta"><?php the_time(__('F jS, Y')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more") ?></a></div>
+              <div class="meta"><?php the_time(__('F jS, Y', 'globalnews')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more", 'globalnews') ?></a></div>
             </li>
             <?php endwhile?>
             <?php wp_reset_query()?>
@@ -140,7 +141,7 @@ get_header();
               <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
               <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
               <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16)?></p>
-              <div class="meta"><?php the_time(__('F jS, Y')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more") ?></a></div>
+              <div class="meta"><?php the_time(__('F jS, Y', 'globalnews')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more", 'globalnews') ?></a></div>
             </li>
             <?php endwhile?>
             <?php wp_reset_query()?>
@@ -156,7 +157,7 @@ get_header();
               <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
               <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
               <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16)?></p>
-              <div class="meta"><?php the_time(__('F jS, Y')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more") ?></a></div>
+              <div class="meta"><?php the_time(__('F jS, Y', 'globalnews')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more", 'globalnews') ?></a></div>
             </li>
             <?php endwhile?>
             <?php wp_reset_query()?>

@@ -25,7 +25,7 @@ get_header();
     <!-- content column -->
     <div id="main" class="clearingfix">
 
-      <h3 class="pagetitle"><?php printf(__("News by &#8216;%s&#8217;"), get_the_author()) ?></h3>
+      <h3 class="pagetitle"><?php printf(__("News by &#8216;%s&#8217;", 'globalnews'), get_the_author()) ?></h3>
 
       <div class="listposts">
         <?php
@@ -70,7 +70,7 @@ get_header();
               <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
               <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
               <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16)?></p>
-              <div class="meta"><?php the_time(__('F jS, Y')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more") ?></a></div>
+              <div class="meta"><?php the_time(__('F jS, Y', 'globalnews')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more", 'globalnews') ?></a></div>
             </li>
             <?php endwhile?>
             <?php wp_reset_query()?>
@@ -86,7 +86,7 @@ get_header();
               <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
               <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
               <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16)?></p>
-              <div class="meta"><?php the_time(__('F jS, Y')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more") ?></a></div>
+              <div class="meta"><?php the_time(__('F jS, Y', 'globalnews')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more", 'globalnews') ?></a></div>
             </li>
             <?php endwhile?>
             <?php wp_reset_query()?>
@@ -102,7 +102,7 @@ get_header();
               <h3><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></h3>
               <p><?php if(has_post_thumbnail()) { ?><a href="<?php the_permalink() ?>" title="<?php the_title()?>"><?php the_post_thumbnail('home-thumb') ?></a><?php } ?>
               <?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,16)?></p>
-              <div class="meta"><?php the_time(_('F jS, Y')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more") ?></a></div>
+              <div class="meta"><?php the_time(__('F jS, Y', 'globalnews')) ?> | <a href="<?php the_permalink() ?>"><?php _e("Read more", 'globalnews') ?></a></div>
             </li>
             <?php endwhile?>
             <?php wp_reset_query()?>

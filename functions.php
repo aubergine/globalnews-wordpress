@@ -14,6 +14,8 @@ if ( ! isset( $content_width ) ) {
 
 load_theme_textdomain('globalnews', get_template_directory() . '/languages');
 
+//exit(get_template_directory() . '/languages');
+//phpinfo(); exit;
 // Theme Setup
 add_action( 'after_setup_theme', 'twentyten_setup' );
 if ( ! function_exists( 'twentyten_setup' ) ):
@@ -25,7 +27,7 @@ function twentyten_setup() {
   add_image_size( 'cat-thumb', 120, 88, true );
   add_theme_support( 'automatic-feed-links' );
   register_nav_menus( array(
-    'topmenu' => __( 'Main Navigation', 'twentyten' ),
+    'topmenu' => __( 'Main Navigation', 'globalnews' ),
   ));
 }
 endif;
@@ -42,7 +44,7 @@ function twentyten_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'twentyten_excerpt_length' );
 
 function twentyten_continue_reading_link() {
-  return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) . '</a>';
+  return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'globalnews' ) . '</a>';
 }
 
 function twentyten_auto_excerpt_more( $more ) {
@@ -61,9 +63,9 @@ add_filter( 'get_the_excerpt', 'twentyten_custom_excerpt_more' );
 // Register Widget Function
 function twentyten_widgets_init() {
   register_sidebar( array(
-    'name' => __( 'Primary Widget Area', 'twentyten' ),
+    'name' => __( 'Primary Widget Area', 'globalnews' ),
     'id' => 'primary-widget-area',
-    'description' => __( 'The primary widget area', 'twentyten' ),
+    'description' => __( 'The primary widget area', 'globalnews' ),
     'before_widget' => '<div id="%1$s" class="sidebox sideboxlist %2$s">'."\n",
     'after_widget' => '</div>'."\n\n",
     'before_title' => '<h3 class="widget-title">'."\n",
