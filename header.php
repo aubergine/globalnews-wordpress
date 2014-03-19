@@ -64,7 +64,9 @@
     
     <!-- Logo -->
     <div class="logo">
-    <a href="<?php echo get_option('home')?>/" title="<?php bloginfo('name')?> - <?php bloginfo('description')?>"><img id="logo" src="<?php bloginfo('stylesheet_directory')?>/images/logo.png" alt="<?php bloginfo('name')?>" title="<?php bloginfo('name')?> - <?php bloginfo('description')?>" /></a>
+        <a href="<?php echo get_option('home')?>/" title="<?php bloginfo('name')?> - <?php bloginfo('description')?>">
+            <img id="logo" src="<?php bloginfo('stylesheet_directory') ?>/images/<?php echo get_option('gbn_logo_path')?>" alt="<?php bloginfo('name')?>" title="<?php bloginfo('name')?> - <?php bloginfo('description')?>" />
+        </a>
     </div>
     <!-- /Logo -->
     
