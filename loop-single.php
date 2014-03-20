@@ -5,6 +5,7 @@
         <p class="postmetadata">
             <span><?php _e("Posted by ", 'globalnews'); the_author_posts_link() ?></span>
             <?php _e("Posted on ", 'globalnews'); the_time(__('l, F jS, Y', 'globalnews')) ?>
+            | <?php if(function_exists('the_views')) the_views() ?>
         </p>
         <div class="post_image">
           <?php if(has_post_thumbnail()) { ?><a href="<?php echo get_post_meta($post->ID, "thumb", $single = true)?>" title="<?php the_title()?>" class="zoom"><?php the_post_thumbnail('medium') ?></a><br /><?php } ?><br />
