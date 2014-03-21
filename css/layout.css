@@ -712,47 +712,47 @@ div.sideboxlist ul li a {
     display:block;
 }
 
-/* subscribe */
-/*div#subscribe ul {
-    background:url(../images/sub-mail.png) 3px 0 no-repeat;
-    padding-left:60px;
-}*/
-/*
-div#search ul {
-    background:url(../images/search.png) 3px 0 no-repeat;
-    padding-left:60px;
-}
-
-div#search ul label {
-    padding:0 10px 0 0;
-}
-
-div#search ul input#s {
-    width:150px;
-    padding:3px;
-    font-size:12px;
-    border:#CCC 1px solid;
-}*/
-
 /*New Search in header*/
+div#search,
+div#search * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 div#search {
     float: right;
-    /*height: 25px;*/
     display: inline-block;
-    /*line-height: 25px;*/
-    /*font-size: 16px;*/
-    /*margin: 3px 0;*/
-    /*padding: 0 4px;*/
     position: absolute;
     top: 87px;
     right: 0;
 }
+
+
 div#search input[type="text"] {
-    height: 25px;
-    line-height: 25px;
+    height: 29px;
+    line-height: 27px;
     font-size: 16px;
-    padding: 0 2px;
+    padding: 0 4px;
+    border: 1px solid #BBB;
+
 }
+
+div#search label {
+    height: 27px;
+    width: 27px;
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+    background: url("../images/search-button.png") 4px 5px no-repeat;
+}
+
+div#search input[type="submit"] {
+    visibility: hidden;
+    position: absolute;
+}
+
 div#search input[type="submit"] {
     height: 29px;
     line-height: 25px;

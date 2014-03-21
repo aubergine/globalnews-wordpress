@@ -81,7 +81,8 @@
     <div id="search">
         <form role="search" method="get" id="searchform" action="<?php echo get_option('home')?>" >
           <input type="text" value="" name="s" id="s" placeholder="<?php _e("Search", "globalnews") ?>" />
-          <input type="submit" id="searchsubmit" value="->" />
+          <label for="searchsubmit"></label>
+          <input type="submit" id="searchsubmit" value="?" />
         </form>
     </div>
     <!-- / sidebox -->
