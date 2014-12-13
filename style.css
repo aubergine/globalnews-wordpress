@@ -17,3 +17,10 @@ TAGS: news, newspaper, two-columns, three-columns, fixed-width, theme-options, r
 /* Custom styles */
 @import "css/custom.css";
 
+p {
+   padding-top: 15px;
+}
+
+img {
+   border: 0px;
+}

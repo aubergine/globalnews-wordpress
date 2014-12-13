@@ -16,3 +16,57 @@ Add your custom styles here instead of style.css for easier customization.
 #related_news div.yarpp-related h3 {
     display: none;
 }
+
+.advert,
+.featured_banner {
+    display: none;
+}
+#middle > #right > .advert {
+    display: block;
+    background: none;
+    padding-top: 0;
+}
+/* Links under photo is disabled.
+TODO: disable functionality + plugin inside the theme */
+#post-links {
+    display: none;
+}
+.post_image br {
+    display: none;
+}
+/* Styling for FB widget. Right now it is implemented as text widget */
+div.sidebox.widget_text {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+/*div.sidebox.widget_text > h3.widget-title {
+    display: none;
+}*/
+
+/* Styling for Share buttons at the bottom */
+div.e-mailit_toolbox span + br {
+    display: none;
+}
+
+/*============= Styles for kotsyubynske ============*/
+#text-18 table td > b {
+    font-size: 13px !important;
+    line-height: 14px !important;
+    text-decoration: none !important;
+}
+#text-18 > div.textwidget > p:first-child > br {
+    display: none;
+}
+div[id^="text-"] > h3 {
+    padding-left: 10px;
+}
+/* yop-poll */
+div.textwidget  form.yop-poll-forms {
+    padding: 20px 10px 10px;
+}
+
+/* Related posts */
+.yarpp-related {
+    clear: both;
+}

@@ -71,6 +71,16 @@ function twentyten_widgets_init() {
     'before_title' => '<h3 class="widget-title">'."\n",
     'after_title' => '</h3>'."\n",
   ) );
+
+    register_sidebar( array(
+        'name' => __( 'Homepage Widget Area', 'globalnews' ),
+        'id' => 'homepage-widget-area',
+        'description' => __( 'The Homepage widget area', 'globalnews' ),
+        'before_widget' => '<div style="background: none;" id="%1$s" class="sidebox sideboxlist %2$s">'."\n",
+        'after_widget' => '</div>'."\n\n",
+        'before_title' => '<h3 style="display: none;" class="widget-title">'."\n",
+        'after_title' => '</h3>'."\n",
+    ) );
 }
 add_action( 'widgets_init', 'twentyten_widgets_init' );
 
@@ -140,7 +150,7 @@ $options = array (
           "type" => "text"),
   array(  "name" => "Headline Articles",
           "desc" => "Number of News Articles in Headline Section to be displayed.",
-          "options" => array('3', '4', '5', '6', '7', '8', '9', '10'),
+          "options" => array('2', '3', '4', '5', '6', '7', '8', '9', '10'),
           "id" => $shortname."_headline_num",
           "std" => "3",
           "style" => "width:150px;",

@@ -65,6 +65,8 @@ get_header();
         <?php endwhile?>
         <?php wp_reset_query()?>
       </ul>
+
+      <?php get_sidebar('homepage') ?>
     </div>
     <!-- / highlights -->
     
@@ -87,7 +89,7 @@ get_header();
     <ul>
       <?php query_posts('showposts='.stripslashes(get_option('gbn_slideshow_num')).'&tag=slideshow'); $carouselid=1?>
       <?php while (have_posts()) : the_post()?>
-      <li><a href="<?php $values = get_post_custom_values("thumb"); echo $values[0]?>" title="<?php the_title()?>" class="zoom"><?php if(has_post_thumbnail()) { ?><?php the_post_thumbnail('home-slider') ?><?php } ?></a><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></li>
+      <li><b><a href="<?php the_permalink() ?><?php // fix $values = get_post_custom_values("thumb"); echo $values[0]?>" title="<?php the_title()?>" class="fix_zoom"><?php if(has_post_thumbnail()) { ?><?php the_post_thumbnail('home-slider') ?><?php } ?></a><a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="title"><?php the_title()?></a></b></li>
       <?php $carouselid++?>
       <?php endwhile?>
       <?php wp_reset_query()?>

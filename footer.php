@@ -24,7 +24,7 @@ get_header();
     
     <!-- copyright -->
     <div class="copyright">
-      2010 &copy; <a href="<?php echo get_option('home')?>/"><u><?php bloginfo('name')?></u></a>. Sponsored by <a href="http://www.instantshift.com/" target="_blank">Instantshift</a>. Developed by <a href="http://www.rapidxhtml.com/" target="_blank" title="PSD to HTML">RapidxHTML</a>.
+      2010-2014 &copy; <a href="<?php echo get_option('home')?>/"><u><?php bloginfo('name')?></u></a>. Sponsored by <a href="http://www.instantshift.com/" target="_blank">Instantshift</a>. Developed by <a href="http://www.rapidxhtml.com/" target="_blank" title="PSD to HTML">RapidxHTML</a>.
     </div>
     <!-- / copyright -->
   
